@@ -1,0 +1,9 @@
+((synopsis "Trivial macro to define records and appropriate printers")
+ (author "Peter Danenberg")
+ (category lang-exts)
+ (license "BSD")
+ (depends lolevel
+          matchable
+          setup-helper)
+ (test-depends test)
+ (foreign-depends))

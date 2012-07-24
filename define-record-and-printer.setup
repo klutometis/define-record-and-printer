@@ -1,0 +1,7 @@
+(include "setup-helper")
+
+(verify-extension-name "define-record-and-printer")
+
+(setup-shared-extension-module
+ 'define-record-and-printer
+ (extension-version 0.1))
