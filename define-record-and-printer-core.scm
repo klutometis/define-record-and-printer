@@ -1,4 +1,15 @@
+@(title "define-record-and-printer")
+@(description "Legible records")
+@(author "Peter Danenberg")
+@(username "klutometis")
+@(email "pcd@roxygen.org")
+
 (define-syntax define-record-and-printer
+  @("Define a record and a printer that shows the contents of the
+record as a vector; see {{define-record}}."
+    (name "The name of the record")
+    (slotname "The name of the slot")
+    (@to "record"))
   (lambda (expression rename compare)
     (match expression
       ((_ record . fields)
