@@ -4,4 +4,9 @@
 
 (setup-shared-extension-module
  'define-record-and-printer
- (extension-version 0.1))
+ (extension-version 0.1)
+ compile-options: '(-X cock))
+
+(run (cock -o define-record-and-printer.wiki
+           define-record-and-printer-core.scm "||"
+           echo cock-utils not "installed:" not creating documentation))
