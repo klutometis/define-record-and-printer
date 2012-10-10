@@ -2,7 +2,8 @@
  (author "Peter Danenberg")
  (category lang-exts)
  (license "BSD")
- (depends matchable
+ (depends cock
+          matchable
           setup-helper)
  (test-depends debug test)
  (foreign-depends))
