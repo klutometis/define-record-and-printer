@@ -1,0 +1,49 @@
+== define-record-and-printer
+
+Legible records
+[[toc:]]
+=== {{define-record-and-printer}}
+<syntax>(define-record-and-printer name slotname) → record</syntax>
+Define a record and a printer that shows the contents of the
+record as a vector; see {{define-record}}.
+; name : The name of the record
+; slotname : The name of the slot
+<enscript highlight="scheme">(define-syntax
+  define-record-and-printer
+  (lambda (expression rename compare)
+    (match expression
+           ((_ record . fields)
+            (let ((%define-record (rename 'define-record))
+                  (%define-record-printer (rename 'define-record-printer))
+                  (%begin (rename 'begin))
+                  (%lambda (rename 'lambda))
+                  (%write (rename 'write))
+                  (%record->vector (rename 'record->vector)))
+              `(,%begin
+                (,%define-record ,record ,@fields)
+                (,%define-record-printer
+                 ,record
+                 (,%lambda
+                  (record out)
+                  (,%write (,%record->vector record) out)))))))))
+</enscript>
+=== About this egg
+
+==== Author
+
+[[/users/klutometis|Peter Danenberg]]
+
+==== License
+BSD
+==== Dependencies
+* [[cock]]
+* [[matchable]]
+* [[setup-helper]]
+
+==== Versions
+; 0.1 : Version 0.1
+; 0.1.1 : Release with docs
+; 0.1.2 : Add cock.
+==== Colophon
+
+Documented by [[/egg/cock|cock]].
