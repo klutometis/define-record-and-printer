@@ -1,6 +1,6 @@
 == define-record-and-printer
 
-Legible records
+Trivial macro to define records and appropriate printers
 [[toc:]]
 === {{define-record-and-printer}}
 <syntax>(define-record-and-printer name slotname) → record</syntax>
@@ -32,7 +32,8 @@ record as a vector; see {{define-record}}.
 ==== Author
 
 [[/users/klutometis|Peter Danenberg]]
-
+==== Repository
+[[https://github.com/klutometis/define-record-and-printer]]
 ==== License
 BSD
 ==== Dependencies

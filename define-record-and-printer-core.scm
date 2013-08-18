@@ -1,9 +1,3 @@
-@(title "define-record-and-printer")
-@(description "Legible records")
-@(author "Peter Danenberg")
-@(username "klutometis")
-@(email "pcd@roxygen.org")
-
 (define-syntax define-record-and-printer
   @("Define a record and a printer that shows the contents of the
 record as a vector; see {{define-record}}."
