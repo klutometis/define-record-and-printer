@@ -1,13 +1,10 @@
-(include "setup-helper")
+(use cock setup-helper)
 
 (verify-extension-name "define-record-and-printer")
 
 (setup-shared-extension-module
  'define-record-and-printer
- (extension-version "0.1.2")
+ (extension-version "0.1.3")
  compile-options: '(-X cock))
 
-(handle-exceptions exn
-  (warning "Not generating documentation")
-  (include "setup-helper-cock")
-  (run-cock -o define-record-and-printer.wiki define-record-and-printer-core.scm))
+(run-cock -o define-record-and-printer.wiki define-record-and-printer-core.scm)

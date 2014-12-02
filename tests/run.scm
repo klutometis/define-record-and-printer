@@ -1,4 +1,4 @@
-(use debug define-record-and-printer test)
+(use define-record-and-printer test)
 
 (define-record-and-printer foo bar)
 (test

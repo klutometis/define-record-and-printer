@@ -8,5 +8,5 @@
  (depends cock
           matchable
           setup-helper)
- (test-depends debug test)
+ (test-depends test)
  (foreign-depends))
