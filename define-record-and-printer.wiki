@@ -42,9 +42,9 @@ BSD
 * [[setup-helper]]
 
 ==== Versions
-; 0.1 : Version 0.1
-; 0.1.1 : Release with docs
-; 0.1.2 : Add cock.
+; [[https://github.com/klutometis/define-record-and-printer/releases/tag/0.1|0.1]] : Version 0.1
+; [[https://github.com/klutometis/define-record-and-printer/releases/tag/0.1.1|0.1.1]] : Release with docs
+; [[https://github.com/klutometis/define-record-and-printer/releases/tag/0.1.2|0.1.2]] : Add cock.
 ==== Colophon
 
 Documented by [[/egg/cock|cock]].
