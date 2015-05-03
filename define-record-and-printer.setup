@@ -1,10 +1,10 @@
-(use cock setup-helper-mod)
+(use hahn setup-helper-mod)
 
 (verify-extension-name "define-record-and-printer")
 
 (setup-shared-extension-module
  'define-record-and-printer
- (extension-version "0.1.3")
- compile-options: '(-X cock))
+ (extension-version "0.1.4")
+ compile-options: '(-X hahn))
 
-(run-cock -o define-record-and-printer.wiki define-record-and-printer-core.scm)
+(run-hahn -o define-record-and-printer.wiki define-record-and-printer-core.scm)
