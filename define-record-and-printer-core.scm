@@ -4,7 +4,8 @@ record as a vector; see {{define-record}}."
     (name "The name of the record")
     (slotname "The name of the slot")
     (@to "record"))
-  (lambda (expression rename compare)
+  (er-macro-transformer
+   (lambda (expression rename compare)
     (match expression
       ((_ record . fields)
        (let ((%define-record (rename 'define-record))
@@ -18,4 +19,4 @@ record as a vector; see {{define-record}}."
            (,%define-record-printer
             ,record
             (,%lambda (record out)
-                 (,%write (,%record->vector record) out)))))))))
+                 (,%write (,%record->vector record) out))))))))))
