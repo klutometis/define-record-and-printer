@@ -1,4 +1,6 @@
-(use define-record-and-printer test)
+(cond-expand
+ (chicken-4 (use define-record-and-printer test))
+ (chicken-5 (import define-record-and-printer test chicken.port)))
 
 (define-record-and-printer foo bar)
 (test

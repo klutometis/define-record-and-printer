@@ -1,0 +1,9 @@
+((synopsis "Trivial macro to define records and appropriate printers")
+ (author "Peter Danenberg")
+ (category lang-exts)
+ (license "BSD")
+ (dependencies (hahn "0.9.3") matchable)
+ (test-dependencies test)
+ (component-options (csc-options "-X" "hahn"))
+ (components
+  (extension define-record-and-printer)))
